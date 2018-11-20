@@ -11,13 +11,13 @@ export class LoginService {
     {id: 2 , username: 'shadan', password: '456'},
     {id: 3 , username: 'zahra', password: '789'},
   ];
-  
+
   constructor() { }
 
-  getUser(id: number){
+  getUser(username: string, pass: string){
     const user = this.users.find(
       (u) => {
-        return u.id === id;
+        return u.username === username && u.password === pass;
       });
       return user;
   }
