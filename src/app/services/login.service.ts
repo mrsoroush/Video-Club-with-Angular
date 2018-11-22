@@ -12,13 +12,37 @@ export class LoginService {
     {id: 3 , username: 'zahra', password: '789'},
   ];
 
+  logedin = 'false';
+
   constructor() { }
+
+  isAuthenticated(){
+    const promise = new Promise(
+      (resolve, reject) => {
+        setTimeout(
+          () => {
+            resolve(this.logedin);
+          }, 1000);
+      });
+      return promise;
+  }
 
   getUser(username: string, pass: string){
     const user = this.users.find(
       (u) => {
         return u.username === username && u.password === pass;
       });
-      return user;
+    this.logedin = 'true';
+    return user;
   }
+
+  getUserById(id: number){
+    const userById = this.users.find(
+      (i) => {
+        return i.id === id;
+      });
+    this.logedin = 'true';
+    return userById;
+  }
+
 }

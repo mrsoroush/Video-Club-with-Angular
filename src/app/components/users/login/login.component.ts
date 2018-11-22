@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
       setTimeout(
         () => {
           this.fileInput.nativeElement.click();
-          this.router.navigate(['/users/profile']);
+          this.router.navigate(['/users/profile'], {queryParams: {id: this.loginedUser.id}});
         }, 2000);
     } else {
       this.message = 'User not found!';

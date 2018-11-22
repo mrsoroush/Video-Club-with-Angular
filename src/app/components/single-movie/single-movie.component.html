@@ -1,0 +1,32 @@
+<div class="card mb-3">
+
+    <div class="card float-card" style="width: 18rem;">
+        <img class="card-img-top" [src]='singleMovie.picPath' [alt]='singleMovie.name' [title]='singleMovie.name'>
+        <div class="card-body">
+          <a href="#" class="btn btn-primary btn-width">Add to watchlist</a>
+        </div>
+      </div>
+
+  <div class="card-body float-card-body">
+    <h3 class="card-title">{{ singleMovie.name }}</h3>
+    <p class="card-text">{{ singleMovie.summary }}</p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <app-comments></app-comments>
+</div>
+
+
+
+
+
+
+
+
+
+
+<p>
+
+</p>

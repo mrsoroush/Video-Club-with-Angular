@@ -1,0 +1,21 @@
+.mb-3 {
+    width: 75%;
+    margin: 5% 10%;
+}
+
+.btn-width {
+    width: 100%;
+}
+
+.float-card {
+    float: left;
+}
+
+.card {
+    display: inline-block !important;
+}
+
+.float-card-body {
+    float: left;
+    width: 73%;
+}
