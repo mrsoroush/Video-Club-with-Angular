@@ -1,4 +1,5 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild} from '@angular/core';
+import { MoviesService } from 'src/app/services/movies.service';
 
 @Component({
   selector: 'app-header',
@@ -7,14 +8,18 @@ import { Component, OnInit} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  searchText = '';
+  @ViewChild('searchInput') searchInput: ElementRef;
 
-  constructor() { }
-  
-
+  constructor(private movieService: MoviesService) { }
 
   ngOnInit() {
     
     }
+
+  onSearch(){
+    
+  }
 
   }
   

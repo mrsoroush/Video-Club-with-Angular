@@ -1,0 +1,11 @@
+.searchUserInput {
+    border: 1px solid #dadada;
+    background: #fff;
+    width: 167px;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 1px;
+    padding: 5px;
+    border-radius: 0.25rem;
+    background: #fcfcfc;
+}

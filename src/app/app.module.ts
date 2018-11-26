@@ -13,6 +13,7 @@ import { AuthGuard } from './services/auth-guard.service';
 import { MoviesComponent } from './components/movies/movies.component';
 import { SingleMovieComponent } from './components/single-movie/single-movie.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { StarCommentComponent } from './components/star-comment/star-comment.component';
 
 
 
@@ -25,6 +26,7 @@ import { CommentsComponent } from './components/comments/comments.component';
     MoviesComponent,
     SingleMovieComponent,
     CommentsComponent,
+    StarCommentComponent,
   ],
   imports: [
     BrowserModule,

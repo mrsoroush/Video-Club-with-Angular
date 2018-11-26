@@ -1,5 +1,25 @@
-<label>Comments:</label><br>
-<textarea cols="50" #commentText></textarea><br>
-<button class="btn btn-primary" (click)="sendComment()">Send</button>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <button type="button" class="btn btn-primary btn-lg" (click)="addComment()">Send</button>
+        <span class="input-group-text">Your Comment:</span>
+    </div>
+    <textarea #commentText class="form-control" aria-label="With textarea"></textarea>
+</div>
 
-<p>{{ text }}</p>
+<div *ngIf="isComment;" class="jumbotron jumbotron-fluid">
+    <div *ngFor="let c of comment" class="container">
+        <p>{{ c.text }}</p>
+        <div class="ratingIcons">
+            <fa name="thumbs-up" (click)="addLike(c)"></fa>
+            <span>{{ c.like }}</span>
+            <fa name="thumbs-down" (click)="addDislike(c)"></fa>
+            <span>{{ c.dislike }}</span>
+        </div>
+        <div class="stars">
+            <span>Votes: </span>
+            <app-star-comment [rating]="c.numberOfReviews != 0 ? c.star / c.numberOfReviews : 0"></app-star-comment>
+            <input type="number" #ratingInput class="voteInput" min="0" max="5" (keyup.enter)="reviewsCount(c, ratingInput)">
+        </div>
+        <hr>
+    </div>
+</div>
